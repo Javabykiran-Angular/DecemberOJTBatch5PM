@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var circleclass_1 = require("./circleclass");
+var Reactangleclass_1 = require("./Reactangleclass");
+var objCircle = new circleclass_1.Circle(2);
+objCircle.Myarea();
+objCircle.display();
+var objRect = new Reactangleclass_1.Rectangle(3, 4);
+objRect.Myarea();
+objRect.display();
