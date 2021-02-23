@@ -1,0 +1,24 @@
+<p>property-binding works!</p>
+
+<!-- Property Binding is apply only attribute=>
+html/component(custom attribute) -->
+<!-- syntax [attribute_name]="Property_name" -->
+
+<input type="text" 
+[value]="name"> <br><br>
+<img [src]="imgUrl" alt="File not load"
+style="width: 200px;height: 200px;">
+<hr>
+<h2>Difference between String Interpolation Vs Property Binding</h2>
+
+<div hidden>
+    Data is Hidden
+</div> <br>
+<div hidden=" {{ishidden}} " >
+    Data should be shown using String Interpolation
+</div> <br><br>
+<div [hidden]="ishidden">
+    Data should be shown using Property Binding
+</div>
+
+
