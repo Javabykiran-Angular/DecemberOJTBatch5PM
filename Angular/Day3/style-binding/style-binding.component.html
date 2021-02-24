@@ -1,0 +1,16 @@
+<p>style-binding works!</p>
+<!-- // Normal HTML -->
+<h1 style="color: blueviolet;">Apply Style in HTML is called Static Binding</h1>
+<hr>
+<h1 [style.color]="mycolor">Apply Style Binding</h1>
+<h1 [style.color]="rating<5?'red':'green'"> 
+    Apply Style Binding on condition 
+</h1>
+<h1 [style.color]="rating<5?mycolor:mycolor2">
+    Apply Style Binding on condition 
+</h1>
+<hr>
+<h1 [ngStyle]="objstyle">
+    Apply Multiple style 
+    Property Using ngStyle directive
+</h1>
