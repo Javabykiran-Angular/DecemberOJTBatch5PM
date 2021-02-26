@@ -1,0 +1,27 @@
+<p>event-binding2 works!</p>
+
+<input  type="text" placeholder="Enter the name" #myinput > <br><br>
+<button (click)="onClick(myinput.value)">Click</button> <hr>
+
+<input  type="text" placeholder="Enter the name" #myinput1 > <br><br>
+<button (click)="onClick1(myinput1)">Click</button> <hr>
+
+<input #num1 type="text" placeholder="Enter the Number 1"> <br><br>
+<input #num2 type="text" placeholder="Enter the Number 2">
+<br><br>
+<button (click)="onAddition(num1.value,num2.value)">Addition</button>
+<br><br>
+<input type="number" placeholder="Result is ....." [value]="result"><hr>
+
+<input type="text" #myinput4 placeholder="Enter the Username.." 
+(change)="onChange(myinput4)"
+> <hr>
+<input type="text" placeholder="Enter the name"
+(keyup)="onKeyUp()"
+>
+<hr>
+<input type="text" placeholder="Enter the name"
+(keydown)="onKeydown()"
+>
+<!-- mouseover & moutout -->
+
