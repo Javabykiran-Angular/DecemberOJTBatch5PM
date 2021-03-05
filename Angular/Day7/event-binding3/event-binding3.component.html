@@ -1,0 +1,23 @@
+<p>event-binding3 works!</p>
+
+<button (click)="onClick('red')" 
+
+[style.color]="textcolor=='red'?textcolor:'black'">Red</button>
+<button (click)="onClick('green')" 
+[style.color]="textcolor=='green'?textcolor:'black'">Green</button>
+<button (click)="onClick('blue')" 
+[style.color]="textcolor=='blue'?textcolor:'black'">Blue</button>
+<button (click)="onClick('yellow')"
+[style.color]="textcolor=='yellow'?textcolor:'black'">Yellow</button>
+<br><br>
+<div [style.background]="mybackground">
+
+</div>
+<hr>
+
+<!-- Angular given Directive 
+ngModel => used for two way binding
+[(ngModel)]="property_name" -->
+
+<input type="text" [(ngModel)]="name">
+{{name}}

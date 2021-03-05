@@ -1,0 +1,29 @@
+<p>ifdirective works!</p>
+<div *ngIf="rating<5">
+    <h2 > Condition is true </h2>
+</div>
+<hr>
+<div *ngIf="rating1<5; else elsepart">
+    <h2 > Condition is true using if-else </h2>
+</div>
+
+<!-- <div #elsepart>
+    <h2 > Condition is False..... </h2>
+</div> -->
+<ng-template #elsepart>
+    <h2 > Condition is False.....use ng-template </h2>
+</ng-template>
+<hr>
+
+<div *ngIf="rating2<5;then mainpart else elsepart1">
+</div>
+
+<ng-template #mainpart>
+    <input type="text" placeholder="Enter the name...">
+</ng-template>
+
+<ng-template #elsepart1>
+    <div style="color: blue;">
+        <h3>Condition is False</h3>
+    </div>
+</ng-template>
