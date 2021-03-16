@@ -1,0 +1,20 @@
+<p>parent works!</p>
+
+<h2> {{datareceived}} </h2>
+
+<h3> ID:: {{jsondatareceived.id}} </h3>
+<h3>Name :: {{jsondatareceived.fname}} </h3>
+<h3> Roll No :: {{jsondatareceived.rollno}} </h3>
+<hr>
+
+<!-- <app-child1 [parentdata]="str" >
+
+</app-child1> -->
+
+<!-- <app-child1 [ParentJson]="objJson" >
+
+</app-child1> -->
+
+<!-- <app-child2 (datafromchild)="datareceived=$event"></app-child2> -->
+
+<app-child2 (jsondatafromChild)="jsondatareceived=$event"></app-child2>
