@@ -1,0 +1,25 @@
+<p>http works!</p>
+
+<div>
+    <label for="">Title:: &nbsp;</label>
+    <input #inputtitle type="text" placeholder="Enter the title" > <br><br>
+
+    <label for="">Body:: &nbsp;</label>
+    <input #inputbody type="text" placeholder="Enter the Body" > <br><br>
+    <button (click)="OnSend(inputtitle.value,inputbody.value)">Send</button>
+</div>
+<hr>
+<table border="1px">
+    <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of post">
+            <td> {{item.id}} </td>
+            <td> {{item.title}} </td>
+            <td> {{item.body}} </td>
+        </tr> 
+    </tbody>
+</table>
