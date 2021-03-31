@@ -1,0 +1,76 @@
+
+
+<div class="container-fluid">
+    <p>demobootstrap works!</p>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <button class="btn btn-outline-success">Data Send </button>
+        </div>    
+    </div>
+<br>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <table class="table table-bordered table-dark table-hover">
+                <thead>
+                    <th>#</th>
+                    <th>Product Name</th>
+                    <th>Product Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of data;index as i">
+                        <td> {{i+1}} </td>
+                        <td> {{item.name}} </td>
+                        <td> {{item.decription}} </td>
+                        <td> {{item.price}} </td>
+                        <td> {{item.quantity}} </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <table class="table table-bordered table-dark table-hover">
+                <thead>
+                    <th>#</th>
+                    <th>Product Name</th>
+                    <th>Product Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of data;index as i">
+                        <td> {{i+1}} </td>
+                        <td> {{item.name}} </td>
+                        <td> {{item.decription}} </td>
+                        <td >
+                            <span class="badge badge-success" style="padding: 5px;"> {{item.price}} </span> </td>
+                        <td> {{item.quantity}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+
+            <div class="form-group">
+                <label for="">Username::</label>
+                <input type="text" class="form-control"
+                placeholder="Enter the username">
+
+                <label for="">Password::</label>
+                <input type="password" class="form-control"
+                placeholder="Enter the password">
+            </div>
+            <button class="btn btn-success">Login</button>
+
+        </div>
+    </div>
+
+
+
+
+</div>
