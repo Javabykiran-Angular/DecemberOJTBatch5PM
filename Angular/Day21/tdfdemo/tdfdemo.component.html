@@ -1,0 +1,41 @@
+
+
+<div class="container-fluid">
+    <p>tdfdemo works!</p>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+
+            <form >
+
+                <div class="form-group">
+                    <label for="">Username</label>
+                    <input ngModel name="myusername" #username="ngModel" type="text" 
+                    class="form-control" minlength="4" 
+                    pattern="admin"
+                    placeholder="Enter the username..." required>
+
+                    <div class="alert alert-danger" 
+                    *ngIf="username.touched && !username.valid"> 
+                        ** Please enter the Username
+                        <div *ngIf="username.errors.minlength">
+                            ** Username has minimum length is 
+                            {{username.errors.minlength.requiredLength}}
+                            
+                        </div>
+                        <div *ngIf="username.errors.pattern">
+                            ** Username is invalid....
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-success">Submit</button>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</div>
