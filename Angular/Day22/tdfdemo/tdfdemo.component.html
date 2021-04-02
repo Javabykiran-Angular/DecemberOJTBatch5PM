@@ -1,0 +1,114 @@
+
+
+<div class="container-fluid">
+    <p>tdfdemo works!</p>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                {{f.value | json}}
+                <div class="form-group">
+                    <label for="">Username</label>
+                    <input ngModel name="myusername" #username="ngModel" type="text" 
+                    class="form-control" minlength="4" 
+                    pattern="admin"
+                    placeholder="Enter the username..." required>
+
+                    <div class="alert alert-danger" 
+                    *ngIf="username.touched && !username.valid"> 
+                        ** Please enter the Username
+                        <div *ngIf="username.errors.minlength">
+                            ** Username has minimum length is 
+                            {{username.errors.minlength.requiredLength}}
+                            
+                        </div>
+                        <div *ngIf="username.errors.pattern">
+                            ** Username is invalid....
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Comment</label>
+                    <textarea ngModel name="comment" #comment="ngModel" id="" 
+                    cols="30" rows="10" class="form-control" 
+                    placeholder="Enter the comment" required>
+                    </textarea>
+                    <div class="alert alert-danger" 
+                    *ngIf="comment.touched && comment.invalid"> ** Please enter the comment
+                    </div>
+                </div>
+
+                <!-- <input type="text" #input1 (change)="onChange(input1)"> -->
+                <!-- <input type="number" [(ngModel)]="marks" 
+                name="df" [style.color]="marks<40?'red':'green'" ><br><br> -->
+
+                <div class="checkbox">
+                    <label for="">
+                      <input type="checkbox" 
+                      ngModel name="issubscribed"  
+                      #mail="ngModel" required> I Agree All the Terms & Conditions.
+                    </label>                            
+                  </div>
+
+
+                  <div class="radio">
+                    <label for="con">
+                      <input ngModel #contact="ngModel" 
+                      type="radio" name="con" 
+                      id="con" value="email" required > Email
+                    </label>
+                  </div>
+                <div class="radio">
+                    <label for="con1">
+                      <input ngModel #contact="ngModel" 
+                      type="radio" name="con" 
+                      id="con1" value="phone" required > Phone
+                    </label> 
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="contact">contact Method</label>
+                    <select ngModel name="contact" 
+                    id="contact" class="form-control"  required>
+                     <!-- <option *ngFor="let item of contactMethod" 
+                     [value]="item.id">{{item.name}} </option> -->
+
+                     <option *ngFor="let item of contactMethod" 
+                     [ngValue]="item">{{item.name}} </option>
+
+                    </select> 
+                  </div>
+
+                  <div class="form-group">
+                    <label for="myemail">Email Id</label>
+                    <input ngModel #email="ngModel" type="email" name="email" 
+                     id="myemail" class="form-control"                     
+                    placeholder="Enter the Email ID...."                 
+                    [pattern]="EMAIL_PATTERN"
+                    required>                  
+                    <div class="alert alert-danger" 
+                    *ngIf="email.touched && !email.valid " >Please Enter the Email ID                      
+                        <div *ngIf="email.errors.pattern">
+                            ** Please Enter the Appropriate Email ID
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <button [disabled]="!f.valid"
+                class="btn btn-success">Submit</button>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</div>
