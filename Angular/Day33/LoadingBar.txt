@@ -1,0 +1,28 @@
+* Loading Bar Implementation
+Step 1
+npm install --save @ngx-loading-bar/router
+
+Step 2 Import LoadingBarRouterModule in app.module.ts file
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+
+Step 3 
+Also Import section
+LoadingBarRouterModule
+
+Step 4
+implement ngx-loading-bar in your every component
+<ngx-loading-bar></ngx-loading-bar>
+
+Step 5 It gives Error
+Cannot find module '@ngx-loading-bar/core'. To overcome this error we have to install ngx-loading-bar/core 
+
+npm install --save @ngx-loading-bar/core
+
+Step 6
+If again Error persist error TS1086: An accessor cannot be declared in an ambient context in
+solution is it may be work
+Adding skipLibCheck: true in compilerOptions inside tsconfig.json file fixed
+
+"compilerOptions": {
+   "skipLibCheck": true,
+},
